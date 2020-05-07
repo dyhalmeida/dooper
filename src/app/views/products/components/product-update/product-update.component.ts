@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Product } from 'src/app/shared/models/product.model';
+import { Router, ActivatedRoute } from '@angular/router';
+import { ProductService } from 'src/app/shared/services/product/product.service';
 
 @Component({
   selector: 'app-product-update',
@@ -14,7 +16,11 @@ export class ProductUpdateComponent implements OnInit {
     price: null
   }
 
-  constructor() { }
+  constructor(
+    private router: Router,
+    private activeRoute: ActivatedRoute,
+    private productService: ProductService
+  ) { }
 
   ngOnInit(): void {
   }
@@ -24,7 +30,7 @@ export class ProductUpdateComponent implements OnInit {
   }
 
   cancel(): void {
-
+    this.router.navigate(['products']);
   }
 
 }
