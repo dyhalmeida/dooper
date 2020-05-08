@@ -9,6 +9,7 @@ import { ProductReadComponent } from './components/product-read/product-read.com
 import { ProductUpdateComponent } from './components/product-update/product-update.component';
 
 import { ProductRead2Component } from './components/product-read2/product-read2.component';
+import { ProductDeleteComponent } from './components/product-delete/product-delete.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ProductRead2Component } from './components/product-read2/product-read2.
     ProductReadComponent, 
     ProductUpdateComponent,
     ProductRead2Component,
+    ProductDeleteComponent,
   ],
   imports: [
     SharedModule,
