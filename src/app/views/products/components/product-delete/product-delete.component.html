@@ -1,17 +1,17 @@
 <mat-card>
   <mat-card-title>Excluir Produto</mat-card-title>
-  <form class="form" #form="ngForm">
+  <form class="form">
 
     <mat-form-field>
-      <input name="name" [(ngModel)]="product.name" matInput placeholder="Nome" type="text" required>
+      <input name="name" [value]="product.name" matInput placeholder="Nome" type="text" disabled>
     </mat-form-field>
 
     <mat-form-field>
-      <input name="price" [(ngModel)]="product.price" matInput placeholder="Preço (R$)" type="number" required>
+      <input name="price" [value]="product.price" matInput placeholder="Preço (R$)" type="number" disabled>
     </mat-form-field>
 
     <div class="buttons">
-      <button mat-raised-button (click)="deleteProduct()" color="primary" [disabled]="form.invalid">
+      <button mat-raised-button (click)="deleteProduct()" color="primary">
         Excluir
       </button>
       
